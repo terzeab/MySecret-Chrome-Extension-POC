@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "MySecret",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "icons": {
+    "16": "icons/secret16.png",
+    "32": "icons/secret32.png",
+    "48": "icons/secret48.png",
+    "128": "icons/secret128.png"
+  }
+}
